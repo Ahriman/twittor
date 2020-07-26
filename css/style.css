@@ -11,6 +11,11 @@
     font-size: 16px;
     background-color: #dde1e2; 
     width: 100%;
+
+    overscroll-behavior-y: contain; /* Evitar que el usuario pueda actualizar la app arrastrando hacia abajo - Android */
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
 }
 
 /* Personalizados */
