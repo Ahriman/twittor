@@ -1,6 +1,15 @@
 
+var url = window.location.href;
+var swLocation = '/twittor/sw.js';
+
+
 if ( navigator.serviceWorker ) {
-    navigator.serviceWorker.register('/sw.js');
+
+    if ( url.includes('localhost') ) { // Si la URL incluye "localhost" es que estamos en desarrollo
+        swLocation = '/sw.js';
+    }
+
+    navigator.serviceWorker.register( swLocation );
 }
 
 
